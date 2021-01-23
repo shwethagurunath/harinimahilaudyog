@@ -5,21 +5,22 @@ import { makeStyles} from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) => ({
     maps:
     {
-    width: '100%',
-    height: '100%',
+    width: 100,
+    height: 100,
     },
   }));
 
-const MapContainer = () => {
+const MapContainer = (props) => {
     const classes=useStyles();
     return (
-        <div>
+        <div className={classes.maps}>
             <Map
-          google={this.props.google}
-          zoom={8}
+          google={props.google}
+          zoom={18}
           
-          initialCenter={{ lat: 47.444, lng: -122.176}}>
-            <Marker position={{ lat: 48.00, lng: -122.00}} />
+          initialCenter={{ lat: 12.93957920961317, lng: 77.54818308204653}}>
+            <Marker position={{ lat: 12.93957920961317, lng: 77.54818308204653}} />
+           
             </Map>
         
 
@@ -27,4 +28,6 @@ const MapContainer = () => {
     );
 };
 
-export default MapContainer;
+export default GoogleApiWrapper({
+    apiKey: 'AIzaSyBnPIf_EZlhikOkrjsa7HWV_g-a3z60sgU'
+  })(MapContainer);

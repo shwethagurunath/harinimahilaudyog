@@ -18,22 +18,22 @@ const tutorialSteps = [
   {
     
     imgPath:
-      'https://i.ebayimg.com/images/g/jRkAAOSwvEZgATRf/s-l640.jpg',
+    '/productImages/coniokesar.jpeg',
   },
   {
     
     imgPath:
-      'https://5.imimg.com/data5/SELLER/Default/2020/8/ZW/OU/EQ/38556475/new-product-500x500.jpeg',
+    '/productImages/cmangogroup.jpeg',
   },
   {
     
     imgPath:
-      'https://blog.pureindianfoods.com/wp-content/uploads/category/daals-category-banner.jpg',
+    './productImages/cmixedfruitgroup.jpeg',
   },
   {
     
     imgPath:
-      'https://i.pinimg.com/564x/09/c3/a7/09c3a7f6809a3739a97996952af271b0.jpg',
+    '/productImages/panipuri.jpg',
   },
 ];
 
@@ -55,10 +55,11 @@ const useStyles = makeStyles((theme) => ({
   img: {
     height: 255,
     display: 'block',
-    maxWidth: 'full',
+    maxWidth: 300,
     overflow: 'hidden',
     width: '100%',
     textAlign: 'center',
+    margin:'auto'
   },
   content: {
       textAlign: 'center',

@@ -19,11 +19,24 @@ import history from '../../history';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    width: 300,
+    margin: 20,
+    
   },
   media: {
     height: 140,
   },
+  image: {
+      height : 140,
+      width: 140,
+      maxWidth:'full',
+
+  },
+  button: {
+     
+      margin:'auto'
+
+  }
 });
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
@@ -66,9 +79,9 @@ export default function MediaCard(props) {
         enableMouseEvents
       >
         {props.item.img.map((step, index) => (
-          <div key={step.label}>
+          <div key={step}>
             {Math.abs(activeStep - index) <= 2 ? (
-              <img className={classes.img} src={step.imgPath} alt={step.label} />
+              <img className={classes.image} src={step} alt={step} />
             ) : null}
           </div>
         ))}
@@ -78,7 +91,7 @@ export default function MediaCard(props) {
       steps={2}
       position="static"
       activeStep={activeStep}
-      className={classes.root}
+      
       nextButton={
         <Button size="small" onClick={handleNext} disabled={activeStep === 1}>
           
@@ -103,7 +116,7 @@ export default function MediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary" onClick={() => history.push("/contact")}>
+        <Button className={classes.button} size="small" color="primary" onClick={() => history.push("/contact")}>
           Get Quote
         </Button>
       </CardActions>

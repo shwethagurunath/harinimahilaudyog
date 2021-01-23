@@ -36,6 +36,7 @@ const ContactComponent = () => {
                 Saturday : 8:00 am - 8:00pm
                 Sunday : 8:00 am - 8:00pm 
             </p>
+            <MapContainer></MapContainer>
         </div>
     );
 };
