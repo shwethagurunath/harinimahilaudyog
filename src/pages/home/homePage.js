@@ -129,7 +129,7 @@ function HomeComponent() {
         }
       />
       <p className={classes.content}>
-          Harini Mahila Udyog was started way back in 2007. 
+          Harini Mahila Udyog was started in 2014. 
           Since then we have been distributors across Karnataka for various 
           products of the food indstry and stationary to Big Industries.
       </p>
