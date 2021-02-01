@@ -11,7 +11,7 @@ const useStyles = makeStyles({
       borderRadius: 3,
       boxShadow: '0 3px 5px 2px rgba(244, 245, 242, .3)',
       color: 'white',
-      height: 30,
+      height: 40,
       padding: '0 30px',
     },
     display: {
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
         padding: '10px',
     }
   });
-  
+
 
 const HeaderComponent = () => {
     const classes = useStyles();
@@ -56,7 +56,7 @@ const HeaderComponent = () => {
                 <img className={classes.image} src={logo} alt='logo' onClick={() => history.push("/")}></img>
                 <h1 className={classes.title}> Harini Mahila Udyog</h1>
             </div>
-            
+
             {/* Top Tabbar */}
             <div className={classes.root}>
                 <button className={classes.button} onClick={() => history.push("/")}>

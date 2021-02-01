@@ -1,10 +1,10 @@
-import { faFacebookSquare , faInstagramSquare, faWhatsappSquare } from '@fortawesome/free-brands-svg-icons';
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 
 import history from '../history';
+import facebook from './facebooklogo.png';
+import instagram from './instagramlogo.png';
+import whatsapp from './whatsapplogo.png';
 
 const useStyles = makeStyles({
     root: {
@@ -18,7 +18,8 @@ const useStyles = makeStyles({
       display:'flex',
       justifyContent: 'center',
       position: 'absolute',
-      bottom: 0
+
+      width: 'full'
     },
     display: {
         display: 'flex',
@@ -49,7 +50,7 @@ const useStyles = makeStyles({
         padding: '10px',
     }
   });
-  
+
 
 const FooterComponent = () => {
     const classes = useStyles();
@@ -63,15 +64,9 @@ const FooterComponent = () => {
                 <button className={classes.button} onClick={() => history.push("/contact")}>
                 Contact Us
                 </button>
-                <button className={classes.button} onClick={() => 'https://www.facebook.com/groups/346027936766782'}>
-                <FontAwesomeIcon  className={classes.iconImage} icon={faFacebookSquare} /> 
-                </button>
-                <button className={classes.button} onClick={() => history.push("/products")}>
-                <FontAwesomeIcon  className={classes.iconImage} icon={faInstagramSquare} />  
-                </button>
-                <button className={classes.button} onClick={() => history.push("/products")}>
-                <FontAwesomeIcon  className={classes.iconImage} icon={faWhatsappSquare} />  
-                </button>
+                <img src= {facebook} onClick={() => 'https://www.facebook.com/groups/346027936766782'}></img>
+                <img src= {whatsapp}  onClick={() => history.push("/products")}></img>
+                <img src= {instagram}  onClick={() => history.push("/products")}></img>
                 <button className={classes.button} onClick={() => history.push("/privacy")}>
                 Privacy Policy
                 </button>
@@ -82,7 +77,7 @@ const FooterComponent = () => {
                     Disclaimer
                 </button>
             </div>
-            
+
         </div>
     );
 };

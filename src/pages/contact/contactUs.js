@@ -1,10 +1,11 @@
-import { makeStyles} from '@material-ui/core/styles';
-import React from 'react';
-import { Map, GoogleApiWrapper } from 'google-maps-react';
-import MapContainer from './mapcontainer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAddressCard } from '@fortawesome/free-regular-svg-icons';
 import { faBusinessTime, faMailBulk, faMobileAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { makeStyles } from '@material-ui/core/styles';
+import { GoogleApiWrapper, Map } from 'google-maps-react';
+import React from 'react';
+
+import MapContainer from './mapcontainer';
 
 const useStyles = makeStyles((theme) => ({
     content: {
@@ -29,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
         width: 240,
         paddingRight : 20,
         paddingLeft: 20
-    }   
+    }
 }));
 
 
@@ -44,7 +45,7 @@ const ContactComponent = () => {
                 Location:</h3>
                 </div>
                 <div className={classes.text}>
-                    No.4282, Ground Floor, 4th Phase, 
+                    No.4282, Ground Floor, 4th Phase,
                 </div>
                 <div className={classes.text}>
                     Girinagar, Sharadha Devi Road, Banashankari 1st Stage,
@@ -55,7 +56,7 @@ const ContactComponent = () => {
                 </div>
                 <div >
                 <p>
-                    
+
                     <h3  >
                     <FontAwesomeIcon  className={classes.iconImage} icon={faMobileAlt} />
                         Phone No:</h3>
@@ -75,14 +76,14 @@ const ContactComponent = () => {
                 <h3>
                 <FontAwesomeIcon  className={classes.iconImage} icon={faBusinessTime} />
                     Timings:</h3>
-                <p> 
-                    <div className={classes.text}>Monday : 8:00 am - 8:00pm</div>
-                    <div className={classes.text}> Tuesday : 8:00 am - 8:00pm</div>
-                    <div className={classes.text}>Wednesday : 8:00 am - 8:00pm</div>
-                    <div className={classes.text}> Thursday : 8:00 am - 8:00pm</div>
-                    <div className={classes.text}> Friday : 8:00 am - 8:00pm</div>
-                    <div className={classes.text}> Saturday : 8:00 am - 8:00pm</div>
-                    <div className={classes.text}> Sunday : 8:00 am - 8:00pm </div>
+                <p>
+                    <div className={classes.text}>Monday : 10:00 am - 6:00pm</div>
+                    <div className={classes.text}> Tuesday : 10:00 am - 6:00pm</div>
+                    <div className={classes.text}>Wednesday : 10:00 am - 6:00pm</div>
+                    <div className={classes.text}> Thursday : 10:00 am - 6:00pm</div>
+                    <div className={classes.text}> Friday : 10:00 am - 6:00pm</div>
+                    <div className={classes.text}> Saturday : 10:00 am - 6:00pm</div>
+                    <div className={classes.text}> Sunday : 10:00 am - 6:00pm </div>
                 </p>
             </div >
             <div className={classes.maps}>
