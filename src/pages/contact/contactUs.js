@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     maps:
     {
         width: 240,
+        height: 300,
         paddingRight : 20,
         paddingLeft: 20
     }
