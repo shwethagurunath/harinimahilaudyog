@@ -107,6 +107,16 @@ const conioProducts = [
         text: "Ayya Appalam"
     }]
 
+    const chikkiProducts = [{
+        title: "Eat Bit",
+        img:[
+            './productImages/peanutChikki.jpeg'
+        ,
+        '/productImages/chikkiGroup.jpeg'
+        ],
+        text: "Chikki"
+    }]
+
 
 const ProductsComponent = () => {
     const classes= useStyles();
@@ -135,6 +145,15 @@ const ProductsComponent = () => {
             
             {
                 ayyaProducts.map((item) => (
+                    <MediaCard item={item} ></MediaCard>
+                ))
+            }
+            </div>
+            <h1>Chikki Products</h1>
+            <div>
+            
+            {
+                chikkiProducts.map((item) => (
                     <MediaCard item={item} ></MediaCard>
                 ))
             }

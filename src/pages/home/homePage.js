@@ -62,7 +62,6 @@ const useStyles = makeStyles((theme) => ({
     display: 'block',
     width: 800,
     overflow: 'hidden',
-
     textAlign: 'center',
     margin:'auto'
   },
@@ -81,7 +80,7 @@ const useStyles = makeStyles((theme) => ({
   clients:
   {
     display: 'flex',
-    width: 800,
+    width: 800
   }
 }));
 
@@ -196,9 +195,7 @@ function HomeComponent() {
             <div >
           <img src= {amazon}></img>
           </div>
-          <div >
-          <img src= {kial}></img>
-          </div>
+          
           <div >
           <img src= {chaipoint}></img>
           </div>

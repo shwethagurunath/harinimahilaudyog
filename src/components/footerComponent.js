@@ -15,11 +15,11 @@ const useStyles = makeStyles({
       color: 'white',
       height: 40,
       padding: '0 30px',
-      display:'flex',
-      justifyContent: 'center',
-      position: 'absolute',
+    //   display:'flex',
+    //   justifyContent: 'center',
+    //   position: 'absolute',
 
-      width: 'full'
+    //   width: 'full'
     },
     display: {
         display: 'flex',
@@ -48,6 +48,10 @@ const useStyles = makeStyles({
         borderStyle: 'rounded',
         cursor: 'pointer',
         padding: '10px',
+    },
+    logo : {
+        marginLeft : '5px',
+        marginRight: '5px'
     }
   });
 
@@ -64,9 +68,11 @@ const FooterComponent = () => {
                 <button className={classes.button} onClick={() => history.push("/contact")}>
                 Contact Us
                 </button>
-                <img src= {facebook} onClick={() => 'https://www.facebook.com/groups/346027936766782'}></img>
-                <img src= {whatsapp}  onClick={() => history.push("/products")}></img>
-                <img src= {instagram}  onClick={() => history.push("/products")}></img>
+             
+                <img className={classes.logo} src= {facebook} onClick={() => 'https://www.facebook.com/groups/346027936766782'}></img>
+                <img className={classes.logo} src= {whatsapp}  onClick={() => history.push("/products")}></img>
+                <img className={classes.logo} src= {instagram}  onClick={() => history.push("/products")}></img>
+               
                 <button className={classes.button} onClick={() => history.push("/privacy")}>
                 Privacy Policy
                 </button>
