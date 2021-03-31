@@ -1,3 +1,4 @@
+import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 
@@ -14,12 +15,12 @@ const useStyles = makeStyles({
       boxShadow: '0 3px 5px 2px rgba(244, 245, 242, .3)',
       color: 'white',
       height: 40,
-      padding: '0 30px',
+    //   padding: '0 30px',
     //   display:'flex',
     //   justifyContent: 'center',
     //   position: 'absolute',
 
-    //   width: 'full'
+      width: 'full'
     },
     display: {
         display: 'flex',
@@ -47,11 +48,17 @@ const useStyles = makeStyles({
         fontFamily: 'arial',
         borderStyle: 'rounded',
         cursor: 'pointer',
-        padding: '10px',
+        margin: "auto",
+        "&:hover": {
+            backgroundColor: "#FFF"
+        }
     },
     logo : {
-        marginLeft : '5px',
-        marginRight: '5px'
+        height: 30,
+        width: 30,
+        marginRight: 10,
+        marginLeft: 10
+
     }
   });
 
@@ -62,26 +69,26 @@ const FooterComponent = () => {
         <div >
             {/* Bottom Tabbar */}
             <div className={classes.root}>
-                <button className={classes.button} onClick={() => history.push("/feedback")}>
-                Feedback
-                </button>
-                <button className={classes.button} onClick={() => history.push("/contact")}>
-                Contact Us
-                </button>
-             
+            <Button className={classes.button} onClick={() => history.push("/feedback")}>
+            Feedback
+            </Button>
+
+
+                <Button className={classes.button} onClick={() => history.push("/privacy")}>
+                Privacy Policy
+                </Button>
+
+
                 <img className={classes.logo} src= {facebook} onClick={() => 'https://www.facebook.com/groups/346027936766782'}></img>
                 <img className={classes.logo} src= {whatsapp}  onClick={() => history.push("/products")}></img>
                 <img className={classes.logo} src= {instagram}  onClick={() => history.push("/products")}></img>
-               
-                <button className={classes.button} onClick={() => history.push("/privacy")}>
-                Privacy Policy
-                </button>
-                <button className={classes.button} onClick={() => history.push("/terms")}>
+
+                <Button className={classes.button} onClick={() => history.push("/terms")}>
                     Terms and Conditions
-                </button>
-                <button className={classes.button} onClick={() => history.push("/disclaimer")}>
+                </Button>
+                <Button className={classes.button} onClick={() => history.push("/disclaimer")}>
                     Disclaimer
-                </button>
+                </Button>
             </div>
 
         </div>

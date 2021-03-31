@@ -1,3 +1,4 @@
+import Button from "@material-ui/core/Button";
 import { makeStyles } from '@material-ui/core/styles';
 import React from 'react';
 
@@ -40,10 +41,19 @@ const useStyles = makeStyles({
         background: 'transparent',
         border: 'transparent',
         textAlign: 'center',
+        fontWeight: 'bold',
         fontFamily: 'arial',
-        borderStyle: 'rounded',
         cursor: 'pointer',
         padding: '10px',
+        width: 100,
+        outline: 'none',
+        "&:hover": {
+            backgroundColor: "#FFF"
+        }
+    },
+    headerDivision: {
+        height: 60,
+        display: 'flex'
     }
   });
 
@@ -52,30 +62,28 @@ const HeaderComponent = () => {
     const classes = useStyles();
     return (
         <div >
-            {/* Logo */}
-            {/* <div className={classes.display}>
-
-            </div> */}
-
-            {/* Top Tabbar */}
             <div className={classes.root}>
-                <img  src={logo} alt='logo' onClick={() => history.push("/")}></img>
-                <h1 > Harini Mahila Udyog</h1>
-                <button className={classes.button} onClick={() => history.push("/")}>
-                    Home
-                </button>
-                <button className={classes.button} onClick={() => history.push("/products")}>
-                    Products
-                </button>
-                <button className={classes.button} onClick={() => history.push("/paripoorna")}>
-                Paripoorna Products
-                </button>
-                <button className={classes.button} onClick={() => history.push("/about")}>
-                    About Us
-                </button>
-                <button className={classes.button} onClick={() => history.push("/contact")}>
-                    Contact Us
-                </button>
+                <div class={classes.headerDivision}>
+                    <img  src={logo} alt='logo' onClick={() => history.push("/")}></img>
+                    <h1 > Harini Mahila Udyog</h1>
+                </div>
+                <div class={classes.headerDivision}>
+                    <button className={classes.button} onClick={() => history.push("/")}>
+                        Home
+                    </button>
+                    <button className={classes.button} onClick={() => history.push("/products")}>
+                        Products
+                    </button>
+                    <button className={classes.button} onClick={() => history.push("/paripoorna")}>
+                    Paripoorna Products
+                    </button>
+                    <button className={classes.button} onClick={() => history.push("/about")}>
+                        About Us
+                    </button>
+                    <button className={classes.button} onClick={() => history.push("/contact")}>
+                        Contact Us
+                    </button>
+                </div>
             </div>
         </div>
     );
